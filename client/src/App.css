@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+:root {
+  --blue: #003f7d;
+  --green: #096420;
+}
+img { 
+  width:200px;
+  margin:15px; 
+}
+
