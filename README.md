@@ -1,5 +1,6 @@
 # Resilia
-Resilia take home assessment 
+Resilia take home assessment
+![Notification web app](resilia-notifications.png)
 
 
 ## Description: 
