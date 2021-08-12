@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import "./App.css";
+import api from './Services/apiHelper'
 import Notification from "./Components/Notification";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
   useEffect(() => {
     const getNotifications = async () => {
       try {
-        const response = await axios.get(`https://localhost:3000/${notifications}`);
+        const response = await api.get('/notifications');
         console.log(response.data);
         setNotifications(response.data);
         return response.data;
