@@ -4,20 +4,46 @@ import './App.css';
 import Notification from './Components/Notification';
 
 function App() {
-  const [notification, setNotification] = useState([])
+  const [notifications, setNotifications] = useState([])
 
   useEffect(() => {
     const getNotifications = async () => {
-      const resp = await axios.get("http://localhost:3000/notifications");
-      setNotification(resp.data);
-    };
+    
+      // fetch(`http://localhost:3001/notifications`, {
+      //   method: "GET",
+      // })
+      //   .then((response) => response.json())
+      //   .then((arrayOfNotifications) => {
+      //     setNotifications(arrayOfNotifications);
+      //   });
+      // }
+      
+      
+      try {
+        const response = await axios.get(`http://localhost:3000/notifications`)
+        console.log(response.data)
+        setNotifications(response.data);
+        return response.data
+      } catch (error) {
+        throw error
+      }
+    }
     getNotifications();
-  })
+    },[]);
+    //   const resp = await axios.get("http://localhost:3000/notifications");
+    // };
+  
+
+  useEffect(() => {
+    localStorage.setItem("notifications", notifications)
+
+  },[notifications])
+
 
   return (
     <div className="App">
-      <img src="https://images.squarespace-cdn.com/content/v1/5e45fd7b05ae4e3f2f2ed60f/1581645908407-OU71JDZN3L0QV38JKDGQ/Resilia_Final_FullColor.jpg?format=1500w" />
-      <Notification notification={notification}/>
+      <img src="https://images.squarespace-cdn.com/content/v1/5e45fd7b05ae4e3f2f2ed60f/1581645908407-OU71JDZN3L0QV38JKDGQ/Resilia_Final_FullColor.jpg?format=1500w" alt=" "/>
+      <Notification notifications={notifications}/>
     </div>
   );
 }
