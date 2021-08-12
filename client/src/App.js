@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const getNotifications = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/notifications`);
+        const response = await axios.get(`https://localhost:3000/${notifications}`);
         console.log(response.data);
         setNotifications(response.data);
         return response.data;
@@ -19,12 +19,6 @@ function App() {
     };
     getNotifications();
   }, []);
-
-  // useEffect(() => {
-  //   const parsedNottification = Number(localStorage.getItem("") || 0)
-  //   setNotification(parsedNottification)
-  // }, [])
-
 
   useEffect(() => {
     localStorage.setItem("notifications", JSON.stringify(notifications));
