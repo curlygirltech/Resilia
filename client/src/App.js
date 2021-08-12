@@ -20,6 +20,12 @@ function App() {
     getNotifications();
   }, []);
 
+  // useEffect(() => {
+  //   const parsedNottification = Number(localStorage.getItem("") || 0)
+  //   setNotification(parsedNottification)
+  // }, [])
+
+
   useEffect(() => {
     localStorage.setItem("notifications", notifications);
   }, [notifications]);
