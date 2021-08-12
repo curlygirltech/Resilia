@@ -1,4 +1,5 @@
 import React from 'react'
+import './Notification.css'
 
 export default function Notification({ notifications }) {
   
@@ -8,10 +9,10 @@ export default function Notification({ notifications }) {
       <div className="notification-parent">
       {notifications && notifications.map((notification) => {
         return (
-          <>
+          <div className="individual-notification">
           <h2>{notification.title}</h2>
           <p>{notification.content}</p>
-          </>
+          </div>
           )
           
         })}

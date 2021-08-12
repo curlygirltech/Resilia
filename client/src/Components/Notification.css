@@ -1,0 +1,17 @@
+.notifcations-headline{
+  font-size: 30px;
+}
+
+.notification-parent{
+  margin:10px;
+}
+
+.individual-notification{
+  margin: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+h2{
+  font-size:20px;
+}
