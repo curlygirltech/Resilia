@@ -27,7 +27,7 @@ function App() {
 
 
   useEffect(() => {
-    localStorage.setItem("notifications", notifications);
+    localStorage.setItem("notifications", JSON.stringify(notifications));
   }, [notifications]);
 
   return (

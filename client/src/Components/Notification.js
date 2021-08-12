@@ -9,7 +9,8 @@ export default function Notification({ notifications }) {
       <div className="notification-parent">
       {notifications && notifications.map((notification) => {
         return (
-          <div className="individual-notification">
+          <div className="individual-notification"
+          key = {notification.id}>
           <h2>{notification.title}</h2>
           <p>{notification.content}</p>
           </div>
