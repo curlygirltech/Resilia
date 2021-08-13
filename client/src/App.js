@@ -20,7 +20,12 @@ function App() {
     };
     getNotifications();
   }, []);
-
+  
+//gets item
+  useEffect(() => {
+    localStorage.getItem("notifications", JSON.stringify(notifications))
+  },[notifications])
+//sets item
   useEffect(() => {
     localStorage.setItem("notifications", JSON.stringify(notifications));
   }, [notifications]);

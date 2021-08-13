@@ -9,7 +9,7 @@
 Notification.destroy_all
 
 @notification1 = Notification.create!(title: "501(c)3 Approved for Jrue & Lauren Impact Fund ", content: "follow up with CFO on next steps")
-@notification2 = Notification.create!(title: "Nonprofit Coaching", content: "info-session for prospects")
-@notification3 = Notification.create!(title: "Greater New Orleans Grant Proposal", content: "meeting with The GNOF")
+@notification2 = Notification.create!(title: "Nonprofit Coaching", content: "consultation for new  prospects")
+@notification3 = Notification.create!(title: "Greater New Orleans Foundation Grant Proposal", content: "meeting with The GNOF")
 
 puts 'notications created'

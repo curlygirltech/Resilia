@@ -7,7 +7,7 @@ Resilia take home assessment
 This is a web application that displays notifications with a React frontend, Ruby-on-rails backend, and  a postgreSQL database
 
 ## Deployment:
-[Netlify][1] for the frontend and [Heroku][2] for the backend. 
+[Netlify][1] for the [Heroku][2] for the backend. 
 Tested with Postman
 
 [1]:https://www.netlify.com/
